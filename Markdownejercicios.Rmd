@@ -1,0 +1,61 @@
+---
+title: "ejercicios"
+author: "Santiago Figueroa"
+date: "2024-10-30"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+##EJERCICIO 1
+
+primer_ejercicio<- list(
+  peso = c(75,80,67,55),
+  letra_favorita= "n",
+  matriz = matrix(data = c(1,2,3,4), nrow = 2),
+  df = data.frame(nombre = c( "Santiago", "Miguel", "Ivan", "Jake"),
+                  edades = c(22,21,20,25))
+)
+
+primer_ejercicio
+str(primer_ejercicio)
+
+
+##Ejercicio 2
+
+# Creando una lista con diferentes tipos de datos
+compleja_lista <- list(
+  numero = 42,
+  vector = c(1, 2, 3),
+  matriz = matrix(c(1, 2, 3, 4), nrow = 2),
+  data_frame = data.frame(nombre = c("E. coli", "S. aureus"), gram = c("+", "-"))
+)
+
+print(compleja_lista)
+#Agregar
+tamaño_en_nm<- c(4,5)
+append(compleja_lista, tamaño_en_nm)
+
+#Ejercicio 4
+
+bacterias_locas<- list(
+  list(Bacteria = "E.coli", Antibioticosresistentes = c("cloranfenicol", 
+                                                        "streptomicina", "daptomicina")),
+  list(Bacteria = "S.aureus",Antibioticosresistentes = "tetraciclina" ),
+  list(Bacteria = "B.burdorferis", Antibioticosresistentes = "cloranfenicol",
+       "streptomicina")
+)
+
+if(length(bacterias_locas[[1]]$Antibioticosresistentes) > length(bacterias_locas[[2]]$Antibioticosresistentes) & length(bacterias_locas[[1]]$Antibioticosresistentes) > length(bacterias_locas[[2]]$Antibioticosresistentes)) {
+  print("E.coli es la más resistente")
+}else if( length(bacterias_locas[[2]]$Antibioticosresistentes) > length(bacterias_locas[[1]]$Antibioticosresistentes) & length(bacterias_locas[[2]]$Antibioticosresistentes)>length(bacterias_locas[[3]]$Antibioticosresistentes)){
+  print("S.aureus es la más resistente")                                         
+}else{
+  print("B.burdorferis es la más resistente")
+}
+
+
