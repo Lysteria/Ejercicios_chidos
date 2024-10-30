@@ -1,2 +1,2 @@
-# Ejercicios_chidos
-Acá subo mis cosas de clase
+# Ejercicios_en_clase
+ 
